@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+	<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    
+    <main class="mdl-layout__content">
+    	{% include header.html %}
+		<div class="mdl-grid  lite-post">
+			<div class="mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+				{% if page.header-img %}
+				<div class="lite-post-hero" style="background:url('{{ page.header-img | escape }}') no-repeat center/cover;-webkit-background-size: center/cover;-moz-background-size: center/cover;">
+			    </div>
+			    {% endif  %}
+			    <h2 class="lite-post-title">{{ page.title }}</h2>
+			    <p class="lite-post-info mdl-color-text--grey-600"><span>Published on</span> {{page.date | date: "%B %-d, %Y"}}</p>
+		    	{{ content }}
+		    </div>
+		</div> 
+    	{% include footer.html %}
+	</main>
+    
+    </div>
+    {% include google-analytics.html %}
+</body>
+
+</html>

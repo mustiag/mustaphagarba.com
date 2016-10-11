@@ -1,0 +1,67 @@
+---
+layout: default
+---
+  <div class="lite-hero">
+    <div class="mdl-grid ">
+      <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-color-text--white">
+        <p class="lite-hero-heading">Welcome, to the Kanuri Lite.</p>
+        <p class="lite-hero-subheading mdl-color-text--white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+      <p>e</p>
+      </div>
+    </div> 
+  </div>
+
+
+  <div class="lite-section">
+    <h3>Our Services</h3>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet lite-section-item">
+        <i class="fa fa-camera-retro" aria-hidden="true"></i>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet lite-section-item">
+         <i class="fa fa-camera-retro" aria-hidden="true"></i>
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+      <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-cell--12-col-tablet lite-section-item">
+         <i class="fa fa-camera-retro" aria-hidden="true"></i>
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+      </div>
+    </div>
+  </div>
+
+
+
+<div class="lite-grid mdl-color--white">
+  <div class="lite-grid-header">
+    <h2>Our Portfolio</h2>
+     <p class="center"> Take a look at some of our recent projects.</p>
+  </div>
+ 
+  <div class="mdl-grid">  
+      {% for post in site.posts limit:3 %}
+        <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--4-col-desktop" >
+          <a href="#" class="lite-grid-link">
+            <div class="lite-grid-item" style="background:url('{{ post.header-img | escape }}') no-repeat center/cover;-webkit-background-size: center/cover;-moz-background-size: center/cover;-webkit-transition: background 0.25s ease;transition: background 0.25s ease;">
+              <div class="lite-overlay">
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <p class="lite-title">{{ post.title | escape }}</p>
+              </div>
+            </div>
+
+          </a>
+        </div>
+      {% endfor %}
+
+  </div>
+  <div class="mdl-grid"><a href="" class="large-link">View all projects</a></div>
+</div>
+
+
+<div class="lite-contact" id="contact">
+  <h4 class="mdl-color-text--white">Get in touch with me</h4>
+  <p>Say hi at  <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">hello@sample.co</a> </p>
+  <p>or call <a href="tel:+234-80-110010">+234-80-110010</a></p>
+</div>
