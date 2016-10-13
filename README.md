@@ -2,12 +2,10 @@
 A simple opensource portfolio template for jekyll websites. 
 ## Features  
 - Responsive layout.
-- Supports tags and categories.
-- Social profile author.
-- Material Design Lite based.
+- Supports tags and disqus.
+- Social profiles and  social sharing supported.
+- Based on Material Design Lite.
 - Font-Awesome Icons.
-- Pagination.
-- Syntax highlighting with pygments.
 - Google analytics.
 
 
@@ -15,9 +13,6 @@ A simple opensource portfolio template for jekyll websites.
 
 A full Jekyll environment is included with this theme. If you have Jekyll installed, simply run `jekyll serve` in your command line and preview the build in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
   
-### Features
-
-
 
 ### Download
 * [Download kanuri-lite](https://github.com/mustiag/kanuri-lite/archive/master.zip)

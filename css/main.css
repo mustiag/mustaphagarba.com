@@ -224,6 +224,11 @@ p.lite-post-info{
 	color: #172f3b;
 	
 }
+.mdl-layout-title{
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 24px;
+}
 .mdl-chip {
 	height: 32px;
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
