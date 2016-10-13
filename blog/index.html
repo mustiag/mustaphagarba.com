@@ -1,0 +1,57 @@
+---
+layout: default
+title: Posts
+permalink: /blog/
+---
+<div class="lite-grid mdl-color--white">
+  <div class="lite-grid-header">
+    <h2>Recent Posts</h2>
+     <p class="center"> Take a look at my latest posts from my blog.</p>
+  </div>
+ 
+  <div class="mdl-grid">  
+      {% for post in paginator.posts %}
+        <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--4-col-desktop" >
+          <a href="{{ post.url | prepend: site.baseurl }}" class="lite-grid-link">
+            <div class="lite-grid-item" style="background:url('../{{ post.header-img | escape }}') no-repeat center/cover;-webkit-background-size: center/cover;-moz-background-size: center/cover;-webkit-transition: background 0.25s ease;transition: background 0.25s ease;">
+              <div class="lite-overlay">
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <p class="lite-title">{{ post.title | escape }}</p>
+              </div>
+            </div>
+
+          </a>
+        </div>
+      {% endfor %}
+  </div>
+
+  <div class="mdl-grid pagination">
+      <!-- Pagination links -->
+      {% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+{% endif %}
+  </div>
+
+</div>

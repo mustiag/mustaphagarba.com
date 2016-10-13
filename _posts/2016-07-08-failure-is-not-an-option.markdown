@@ -1,6 +1,8 @@
 ---
 layout:     post
 title:      "Failure is not an option"
+tags: [demo, dbyll, dbtek]
+comments: true 
 permalink: /:title
 date:       2016-07-08 12:00:00
 author:     "Mustapha Garba"

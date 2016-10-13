@@ -1,6 +1,8 @@
 ---
 layout:     post
 title:      "No food for a lazy man"
+tags: [demo, dbyll, dbtek]
+comments: true 
 permalink:	/:title
 date:       2016-09-24 12:00:00
 author:     "Mustapha Garba"

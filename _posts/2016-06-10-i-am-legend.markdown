@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      "How to be an intellectual being."
-subtitle:   "because they lacked opposable thumbs and the brainpower to build a space program."
-date:       2014-06-10 12:00:00
-author:     "Start Bootstrap"
+tags: [demo, jekyll, dbtek]
+comments: true 
+date:       2016-06-10 12:00:00
 permalink: /:title
 header-img: "img/photo6.jpg"
 ---

@@ -2,12 +2,18 @@ html,body{
 	font-size: 90% !important;
 }
 blockquote{
-	border-left: 5px solid #67b3dd;
+	border-left: 5px solid burlywood;
 	padding: 10px 20px;
-	font-size: 1.8rem;
+	font-size: 1.2rem;
+	letter-spacing: 0.3px;
 	font-style: italic;
 	quotes: "“" "”" "‘" "’";
 	margin-bottom: 2rem;
+}
+blockquote::before{
+	position: absolute;
+	content: '“';
+	left: .5rem;
 }
 .center{
 	text-align: center;
@@ -190,7 +196,7 @@ blockquote{
 	font-size: 14px;
 	font-family: "poppins","Arial",sans-serif;
 	letter-spacing: .7px;
-	margin: 15px 0 10px;
+	margin: 20px 0 10px;
 }
 .lite-post-title{
 	font-family: "Poppins","Roboto","sans-serif";
@@ -206,6 +212,63 @@ p.lite-post-info{
 .lite-post-info span{
 	font-weight: 500;
 	color: burlywood;
+}
+.pagination{
+	min-height: 10%;
+	font-size:  1rem;
+	background-color: #f5f5f5;
+	padding: 4rem;
+	width: 100%;
+	text-align: center;
+	transition: background-color .7s ease, color .7s;
+	color: #172f3b;
+	
+}
+.mdl-chip {
+	height: 32px;
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	line-height: 32px;
+	padding: 0 12px;
+	border: 0;
+	border-radius: 16px;
+	background-color: cadetblue;
+	display: inline-block;
+	color: rgba(255, 255, 255, 1);
+	margin: 2px 0;
+	font-size: 0px;
+	white-space: nowrap;
+	font-weight: 100;
+}
+.tags{
+	margin-top: 35px; 
+}
+.share-page{
+	padding: 12px;
+	border-top: 2px solid burlywood;
+	margin-top: 10px;
+}
+.share-page .links{
+    font-size: 20px;
+    color: cadetblue;
+    height: 24px;
+    width: 24px;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition: all 0.31s ease;
+    transition: all 0.31s ease;
+}
+.share-links{
+	display: inline-block;
+}
+.share-label{
+	display: inline;
+	margin-right: 15px;
+	font-size: 14px;
+}
+.disqus{
+	padding: 1.2%;
+
 }
 .footer-social-icons {
     height: auto;

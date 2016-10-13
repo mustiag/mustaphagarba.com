@@ -8,15 +8,45 @@
     
     <main class="mdl-layout__content">
     	{% include header.html %}
-		<div class="mdl-grid  lite-post">
-			<div class="mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+
 				{% if page.header-img %}
 				<div class="lite-post-hero" style="background:url('{{ page.header-img | escape }}') no-repeat center/cover;-webkit-background-size: center/cover;-moz-background-size: center/cover;">
 			    </div>
-			    {% endif  %}
+			    {% endif %}
+			<div class="mdl-grid  lite-post">
+			<div class="mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
+
 			    <h2 class="lite-post-title">{{ page.title }}</h2>
-			    <p class="lite-post-info mdl-color-text--grey-600"><span>Published on</span> {{page.date | date: "%B %-d, %Y"}}</p>
+			    <p class="lite-post-info mdl-color-text--grey-600">
+			    <span>Published on </span> {{page.date | date: "%B %-d, %Y"}} | {% include readtime.html %}
+			    </p>
+		    	
 		    	{{ content }}
+
+	<div class="tags">
+		{% if page.tags %}
+			<div class="tags">
+			{% for tag in page.tags %} 
+			<a href="" class="mdl-chip">
+			<span class="mdl-chip__text">{{tag}}</span>
+			</a>
+			{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+<div class="share-page">
+	<div class="share-links">
+		<span class="share-label">Share this post</span>
+		<a class="links" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter"><i class=" fa fa-twitter" aria-hidden="true"></i></a>
+		<a class="links" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook"><i class=" fa fa-facebook" aria-hidden="true"></i></a>
+		
+    </div>
+</div>
+
+
+	{% if site.disqus and page.comments  %}
+  		{% include disqus.html %}
+	{% endif %}
 		    </div>
 		</div> 
     	{% include footer.html %}
