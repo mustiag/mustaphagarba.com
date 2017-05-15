@@ -1,64 +1,28 @@
 ---
 layout: default
 ---
-  <div class="lite-hero">
-    <div class="mdl-grid ">
-      <div class="mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-color-text--white">
-        <p class="lite-hero-heading">Welcome, to the Kanuri Lite.</p>
-        <p class="lite-hero-subheading mdl-color-text--white">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      </div>
-      <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
-      <p>e</p>
-      </div>
-    </div> 
-  </div>
-
-
-<div class="lite-section mdl-color--grey-100" id="contact">
-    <div class="lite-grid-header">
-      <h2>About Me</h2>
-    </div>
-    <div class="mdl-grid">
+    <!-- Hero Section -->
+  <section class="hero-section">
+    {% include header.html %}
+    <br><br><br><br><br>
+    <div class="row align-bottom">
+      <div class="columns small-12 large-8 large-expand ">
+        <div class="hero-description-section">
+          <h1>I'm Mustapha Garba, <br> a Ruby & Javascript Developer based in Abuja, Nigeria.</h1>
         
-        <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--2-offset-desktop mdl-cell--12-col">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-        </div>      
-    </div>
-
-</div>
-
-<div class="lite-grid mdl-color--white">
-  <div class="lite-grid-header">
-    <h2>Recent Posts</h2>
-     <p class="center"> Take a look at my latest posts from my blog.</p>
-  </div>
- 
-  <div class="mdl-grid">  
-      {% for post in site.posts limit:6 %}
-        <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--4-col-desktop" >
-          <a href="{{ post.url | prepend: site.baseurl }}" class="lite-grid-link">
-            <div class="lite-grid-item" style="background:url('{{ post.header-img | escape }}') no-repeat center/cover;-webkit-background-size: center/cover;-moz-background-size: center/cover;-webkit-transition: background 0.25s ease;transition: background 0.25s ease;">
-              <div class="lite-overlay">
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <p class="lite-title">{{ post.title | escape }}</p>
-              </div>
-            </div>
-
-          </a>
+        <p>
+           I design and build digital products for companies and organisations. <br>
+          I spend my free time organizing meetups, speaking at conferences, and writing about the tools i use and things i discover.
+        </p>
+        <p>
+          Do you have a project, an idea or just want to talk?...Send an email <a href="mailto:hi@mustaphagarba.com">hi@mustaphagarba.com</a>
+        </p>
         </div>
-      {% endfor %}
-  </div>
-  <div class="mdl-grid"><a href="{{ site.baseurl }}/blog" class="large-link">View all projects</a></div>
-
-</div>
-
-
-<div class="lite-contact" id="contact">
-  <h4 class="mdl-color-text--white">Get in touch with me</h4>
-  <p>Say hi at  <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">hello@sample.co</a> </p>
-  <p>or call <a href="tel:+234-80-110010">+234-80-110010</a></p>
-</div>
+      </div>
+      <div class="columns small-12 large-4 large-expand illustration">
+        <div class="hero-description-section">
+          <img src="assets/images/mustapha.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
